@@ -711,6 +711,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="346" height="471"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="21" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRF-eb-QOJ">
+                                <rect key="frame" x="20" y="80" width="306" height="371"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y0E-dA-iVK">
+                                        <rect key="frame" x="52" y="255" width="203" height="116"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="6:00" id="HIv-QP-Wvg">
+                                            <font key="font" size="100" name="HelveticaNeue"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pP7-BB-uzd">
+                                        <rect key="frame" x="20" y="0.0" width="266" height="234"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="stopped" id="W2D-Ed-dTE"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pP7-BB-uzd" firstAttribute="leading" secondItem="rRF-eb-QOJ" secondAttribute="leading" constant="20" symbolic="YES" id="GmO-fV-5YU"/>
+                                    <constraint firstAttribute="trailing" secondItem="pP7-BB-uzd" secondAttribute="trailing" constant="20" symbolic="YES" id="adC-3n-Mtk"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                             <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5M-Yc-OPy">
                                 <rect key="frame" x="0.0" y="0.0" width="346" height="60"/>
                                 <subviews>
@@ -761,9 +790,13 @@
                             </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rRF-eb-QOJ" secondAttribute="trailing" constant="20" id="6GF-ft-WFC"/>
                             <constraint firstAttribute="trailing" secondItem="I5M-Yc-OPy" secondAttribute="trailing" id="J2d-bZ-z3c"/>
                             <constraint firstAttribute="bottom" secondItem="I5M-Yc-OPy" secondAttribute="bottom" id="LWJ-XR-JM1"/>
+                            <constraint firstItem="rRF-eb-QOJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Yjr-ex-Vnq"/>
                             <constraint firstItem="I5M-Yc-OPy" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="p93-3o-p7K"/>
+                            <constraint firstItem="I5M-Yc-OPy" firstAttribute="top" secondItem="rRF-eb-QOJ" secondAttribute="bottom" constant="20" id="s5k-NH-Vp5"/>
+                            <constraint firstItem="rRF-eb-QOJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="tAb-qK-IEb"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -772,4 +805,7 @@
             <point key="canvasLocation" x="493" y="337.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stopped" width="128" height="128"/>
+    </resources>
 </document>
