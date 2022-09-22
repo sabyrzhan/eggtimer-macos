@@ -762,6 +762,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="24"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="stopButtonClicked:" target="XfG-lQ-9wD" id="buE-A2-G4o"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fMa-ay-kPg">
                                         <rect key="frame" x="231" y="-1" width="115" height="62"/>
@@ -772,6 +775,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="24"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="resetButtonClicked:" target="XfG-lQ-9wD" id="zMl-KM-CEK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -799,6 +805,13 @@
                             <constraint firstItem="rRF-eb-QOJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="tAb-qK-IEb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eggImageView" destination="pP7-BB-uzd" id="Uor-Op-j7D"/>
+                        <outlet property="resetButton" destination="fMa-ay-kPg" id="vFM-2d-zcl"/>
+                        <outlet property="startButton" destination="XmS-n9-tm2" id="4QL-mZ-spA"/>
+                        <outlet property="stopButton" destination="3zl-dP-yWP" id="a0s-zs-apk"/>
+                        <outlet property="timeLeftField" destination="y0E-dA-iVK" id="K2H-Ib-nkU"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
