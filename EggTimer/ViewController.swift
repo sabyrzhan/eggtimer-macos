@@ -28,16 +28,30 @@ class ViewController: NSViewController {
     }
 
     @IBAction func startButtonClicked(_ sender: Any) {
-        
+        print("Start button clicked")
     }
     
     @IBAction func stopButtonClicked(_ sender: Any) {
-        
+        print("Stop button clicked")
     }
     
     @IBAction func resetButtonClicked(_ sender: Any) {
-        
+        print("Reset button clicked")
     }
+    
+    
+    @IBAction func startMenuItemSelected(_ sender: Any) {
+        startButtonClicked(sender)
+    }
+    
+    @IBAction func stopMenuItemSelected(_ sender: Any) {
+        stopButtonClicked(sender)
+    }
+    
+    @IBAction func resetMenuItemSelected(_ sender: Any) {
+        resetButtonClicked(sender)
+    }
+    
     
 }
 
