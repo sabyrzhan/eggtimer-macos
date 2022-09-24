@@ -97,6 +97,9 @@ Gw
 DQ
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="okButtonClicked:" target="vMe-qf-xLY" id="oPn-Hi-xcZ"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-VE-R0p">
                                 <rect key="frame" x="17" y="174" width="447" height="25"/>

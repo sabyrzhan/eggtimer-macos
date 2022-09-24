@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F57E89B828DE2D3D009759D6 /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E89B728DE2D3D009759D6 /* PrefsViewController.swift */; };
 		F594C33328DED83C00458E96 /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594C33228DED83C00458E96 /* EggTimer.swift */; };
+		F594C33528DEEDB200458E96 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594C33428DEEDB200458E96 /* Preferences.swift */; };
 		F5C2AA9728DB9D5700A941B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C2AA9628DB9D5700A941B7 /* AppDelegate.swift */; };
 		F5C2AA9928DB9D5700A941B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C2AA9828DB9D5700A941B7 /* ViewController.swift */; };
 		F5C2AA9B28DB9D5700A941B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C2AA9A28DB9D5700A941B7 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		F57E89B728DE2D3D009759D6 /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
 		F594C33228DED83C00458E96 /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
+		F594C33428DEEDB200458E96 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F5C2AA9328DB9D5700A941B7 /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C2AA9628DB9D5700A941B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5C2AA9828DB9D5700A941B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				F594C33228DED83C00458E96 /* EggTimer.swift */,
+				F594C33428DEEDB200458E96 /* Preferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				F5C2AA9928DB9D5700A941B7 /* ViewController.swift in Sources */,
 				F594C33328DED83C00458E96 /* EggTimer.swift in Sources */,
+				F594C33528DEEDB200458E96 /* Preferences.swift in Sources */,
 				F57E89B828DE2D3D009759D6 /* PrefsViewController.swift in Sources */,
 				F5C2AA9728DB9D5700A941B7 /* AppDelegate.swift in Sources */,
 			);
