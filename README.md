@@ -1,4 +1,4 @@
-#  EggTimer - timer for boiling eggs
+#  🍳🖥📝 EggTimer - timer for boiling eggs
 
 Sample project developed when learning macOS development.
 
