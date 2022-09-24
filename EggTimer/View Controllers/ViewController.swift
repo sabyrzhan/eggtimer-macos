@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import AVFoundation
 
 class ViewController: NSViewController {
     @IBOutlet weak var timeLeftField: NSTextField!
@@ -17,6 +18,8 @@ class ViewController: NSViewController {
     
     var eggTimer = EggTimer()
     var prefs = Preferences()
+    
+    var soundPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,7 @@ class ViewController: NSViewController {
         }
         
         configureButtonsAndMenus()
+        prepareSound()
     }
     
     @IBAction func stopButtonClicked(_ sender: Any) {
@@ -70,6 +74,8 @@ class ViewController: NSViewController {
 }
 
 extension ViewController: EggTimerProtocol {
+    // MARK: - EggTimerProtocol
+    
     func timeRemainingOnTimer(_ timer: EggTimer, timeRemaining: TimeInterval) {
         updateDisplay(for: timeRemaining)
     }
@@ -77,6 +83,7 @@ extension ViewController: EggTimerProtocol {
     func timerHasFinihsed(_ timer: EggTimer) {
         updateDisplay(for: 0)
         configureButtonsAndMenus()
+        playSound()
     }
 }
 
@@ -189,5 +196,26 @@ extension ViewController {
                 self.updateFromPrefs()
             }
         }
+    }
+}
+
+extension ViewController {
+    // MARK: - Sound player functions
+    
+    func prepareSound() {
+        guard let audioFileURL = Bundle.main.url(forResource: "ding", withExtension: "mp3") else {
+            return
+        }
+        
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOf: audioFileURL)
+            soundPlayer?.prepareToPlay()
+        } catch {
+            print("Sound player not available: \(error)")
+        }
+    }
+    
+    func playSound() {
+        soundPlayer?.play()
     }
 }
