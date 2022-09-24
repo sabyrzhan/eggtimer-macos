@@ -30,15 +30,21 @@ class ViewController: NSViewController {
     }
 
     @IBAction func startButtonClicked(_ sender: Any) {
-        print("Start button clicked")
+        if eggTimer.isPaused {
+            eggTimer.resumeTimer()
+        } else {
+            eggTimer.duration = 360
+            eggTimer.startTimer()
+        }
     }
     
     @IBAction func stopButtonClicked(_ sender: Any) {
-        print("Stop button clicked")
+        eggTimer.stopTimer()
     }
     
     @IBAction func resetButtonClicked(_ sender: Any) {
-        print("Reset button clicked")
+        eggTimer.resetTimer()
+        updateDisplay(for: 360)
     }
     
     
@@ -82,7 +88,7 @@ extension ViewController {
         let secondsRemaining = timeRemaining - (minutesRemaining * 60)
         
         let secondsDisplay = String(format: "%02d", Int(secondsRemaining))
-        let timeRemainingDisplay = "\(Int(minutesRemaining)):\(secondsDisplay))"
+        let timeRemainingDisplay = "\(Int(minutesRemaining)):\(secondsDisplay)"
         
         return timeRemainingDisplay
     }
