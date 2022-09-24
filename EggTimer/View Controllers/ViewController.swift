@@ -17,9 +17,12 @@ class ViewController: NSViewController {
     @IBOutlet weak var resetButton: NSButton!
     
     var eggTimer = EggTimer()
-    var prefs = Preferences()
+    var selectedTime: TimeInterval = Preferences().selectedTime
     
     var soundPlayer: AVAudioPlayer?
+    
+    let notificationName = Notification.Name(rawValue: "PrefsChanged")
+    var observerToken: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +41,8 @@ class ViewController: NSViewController {
         if eggTimer.isPaused {
             eggTimer.resumeTimer()
         } else {
-            eggTimer.duration = prefs.selectedTime
+            resetSelectedTime()
+            eggTimer.duration = selectedTime
             eggTimer.startTimer()
         }
         
@@ -47,13 +51,15 @@ class ViewController: NSViewController {
     }
     
     @IBAction func stopButtonClicked(_ sender: Any) {
+        resetSelectedTime()
         eggTimer.stopTimer()
         configureButtonsAndMenus()
     }
     
     @IBAction func resetButtonClicked(_ sender: Any) {
+        resetSelectedTime()
         eggTimer.resetTimer()
-        updateDisplay(for: prefs.selectedTime)
+        updateDisplay(for: selectedTime)
         configureButtonsAndMenus()
     }
     
@@ -70,7 +76,9 @@ class ViewController: NSViewController {
         resetButtonClicked(sender)
     }
     
-    
+    deinit {
+        NotificationCenter.default.removeObserver(observerToken!, name: notificationName, object: nil)
+    }
 }
 
 extension ViewController: EggTimerProtocol {
@@ -108,7 +116,7 @@ extension ViewController {
     }
     
     private func imageToDisplay(for timeRemaining: TimeInterval) -> NSImage? {
-        let percentageComplete = 100 - (timeRemaining / prefs.selectedTime * 100)
+        let percentageComplete = 100 - (timeRemaining / selectedTime * 100)
         
         if eggTimer.isStopped {
             let stoppedImageName = (timeRemaining == 0) ? "100" : "stopped"
@@ -166,16 +174,21 @@ extension ViewController {
     // MARK: - Prefernces
     
     func setupPrefs() {
-        updateDisplay(for: prefs.selectedTime)
+        resetSelectedTime()
+        updateDisplay(for: selectedTime)
         
-        let notificationName = Notification.Name(rawValue: "PrefsChanged")
-        NotificationCenter.default.addObserver(forName: notificationName, object: nil, queue: nil) { notification in
+        observerToken = NotificationCenter.default.addObserver(forName: notificationName, object: nil, queue: nil) { notification in
             self.checkForResetAferPrefsChange()
         }
     }
     
+    func resetSelectedTime() {
+        self.selectedTime = Preferences().selectedTime
+    }
+    
     func updateFromPrefs() {
-        self.eggTimer.duration = self.prefs.selectedTime
+        self.selectedTime = Preferences().selectedTime
+        self.eggTimer.duration = self.selectedTime
         self.resetButtonClicked(self)
     }
     
