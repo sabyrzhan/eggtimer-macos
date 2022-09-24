@@ -11,6 +11,7 @@
 		F594C33328DED83C00458E96 /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594C33228DED83C00458E96 /* EggTimer.swift */; };
 		F594C33528DEEDB200458E96 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594C33428DEEDB200458E96 /* Preferences.swift */; };
 		F594C33728DEF72500458E96 /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F594C33628DEF72500458E96 /* ding.mp3 */; };
+		F594C33A28DF042500458E96 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F594C33928DF042500458E96 /* AVFoundation.framework */; };
 		F5C2AA9728DB9D5700A941B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C2AA9628DB9D5700A941B7 /* AppDelegate.swift */; };
 		F5C2AA9928DB9D5700A941B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C2AA9828DB9D5700A941B7 /* ViewController.swift */; };
 		F5C2AA9B28DB9D5700A941B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C2AA9A28DB9D5700A941B7 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		F594C33228DED83C00458E96 /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
 		F594C33428DEEDB200458E96 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F594C33628DEF72500458E96 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
+		F594C33928DF042500458E96 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5C2AA9328DB9D5700A941B7 /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C2AA9628DB9D5700A941B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5C2AA9828DB9D5700A941B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F594C33A28DF042500458E96 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,11 +62,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F594C33828DF042500458E96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F594C33928DF042500458E96 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5C2AA8A28DB9D5600A941B7 = {
 			isa = PBXGroup;
 			children = (
 				F5C2AA9528DB9D5700A941B7 /* EggTimer */,
 				F5C2AA9428DB9D5700A941B7 /* Products */,
+				F594C33828DF042500458E96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

@@ -16,7 +16,7 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
                         <view key="contentView" id="J0M-y9-oBO">
                             <rect key="frame" x="0.0" y="0.0" width="416" height="214"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         </view>
                         <connections>
                             <outlet property="delegate" destination="Io9-R6-OWX" id="6X6-fA-IvY"/>
@@ -36,7 +36,7 @@
                 <viewController id="vMe-qf-xLY" customClass="PrefsViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="O4O-OH-Gyr">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aj-qR-A4Y">
                                 <rect key="frame" x="18" y="212" width="125" height="16"/>
