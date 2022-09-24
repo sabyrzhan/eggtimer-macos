@@ -24,6 +24,7 @@
 		F594C33428DEEDB200458E96 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F594C33628DEF72500458E96 /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 		F594C33928DF042500458E96 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F59F92FE28DF06DA00F452F1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F5C2AA9328DB9D5700A941B7 /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C2AA9628DB9D5700A941B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5C2AA9828DB9D5700A941B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		F5C2AA8A28DB9D5600A941B7 = {
 			isa = PBXGroup;
 			children = (
+				F59F92FE28DF06DA00F452F1 /* README.md */,
 				F5C2AA9528DB9D5700A941B7 /* EggTimer */,
 				F5C2AA9428DB9D5700A941B7 /* Products */,
 				F594C33828DF042500458E96 /* Frameworks */,
