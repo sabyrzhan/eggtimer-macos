@@ -35,6 +35,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F594C33028DED72600458E96 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5C2AA9828DB9D5700A941B7 /* ViewController.swift */,
+				F57E89B728DE2D3D009759D6 /* PrefsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F594C33128DED74A00458E96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F5C2AA8A28DB9D5600A941B7 = {
 			isa = PBXGroup;
 			children = (
@@ -55,10 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				F5C2AA9628DB9D5700A941B7 /* AppDelegate.swift */,
-				F5C2AA9828DB9D5700A941B7 /* ViewController.swift */,
-				F57E89B728DE2D3D009759D6 /* PrefsViewController.swift */,
-				F5C2AA9A28DB9D5700A941B7 /* Assets.xcassets */,
+				F594C33028DED72600458E96 /* View Controllers */,
+				F594C33128DED74A00458E96 /* Model */,
 				F5C2AA9C28DB9D5700A941B7 /* Main.storyboard */,
+				F5C2AA9A28DB9D5700A941B7 /* Assets.xcassets */,
 				F5C2AA9F28DB9D5700A941B7 /* EggTimer.entitlements */,
 			);
 			path = EggTimer;
