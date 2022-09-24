@@ -28,7 +28,7 @@
                 </windowController>
                 <customObject id="v9B-3U-77U" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569" y="-340"/>
+            <point key="canvasLocation" x="542" y="-341"/>
         </scene>
         <!--Prefs View Controller-->
         <scene sceneID="3me-ZK-pfx">
@@ -69,6 +69,9 @@
                                 <rect key="frame" x="18" y="87" width="444" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" enabled="NO" state="on" alignment="left" minValue="1" maxValue="25" doubleValue="6" tickMarkPosition="above" numberOfTickMarks="25" sliderType="linear" id="pym-AD-vIg"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" target="vMe-qf-xLY" id="Umf-3U-j8Y"/>
+                                </connections>
                             </slider>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGz-3D-x1U">
                                 <rect key="frame" x="13" y="13" width="76" height="32"/>
@@ -80,6 +83,9 @@
 Gw
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" target="vMe-qf-xLY" id="Jeb-cy-4uQ"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gBJ-py-tmx">
                                 <rect key="frame" x="414" y="13" width="53" height="32"/>
@@ -91,6 +97,9 @@ Gw
 DQ
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="okButtonClicked:" target="vMe-qf-xLY" id="aGn-Lj-TRN"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-VE-R0p">
                                 <rect key="frame" x="17" y="174" width="447" height="25"/>
@@ -116,13 +125,21 @@ DQ
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="popupValueChanged:" target="vMe-qf-xLY" id="2eR-VO-NbM"/>
+                                </connections>
                             </popUpButton>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="customSlider" destination="Y9W-fV-Zcx" id="CwG-oa-hMN"/>
+                        <outlet property="customTextField" destination="eGI-LV-mku" id="LSE-aH-IhQ"/>
+                        <outlet property="presetsPopup" destination="EN8-VE-R0p" id="uJB-U7-Ox3"/>
+                    </connections>
                 </viewController>
                 <customObject id="IiO-a3-c8I" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="-340"/>
+            <point key="canvasLocation" x="1117" y="-341"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
